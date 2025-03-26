@@ -19,44 +19,40 @@ body {
 }
 
 .hero-overlay {
-  text-align: center;
-  background-color: rgba(49, 39, 165, 0.7); /* #3127a5 transparent */
+  background-color: rgba(49, 39, 165, 0.7); /* yarı saydam çerçeve */
   padding: 2rem;
   border-radius: 1rem;
+  text-align: center;
+  max-width: 90%;
 }
 
 .site-title {
   font-size: 4rem;
   color: #ffdd15;
   text-shadow: 2px 2px #3127a5;
+  margin: 0;
 }
 
 .site-subtitle {
   font-size: 1.2rem;
-  color: #fbf6e2;
-}
-
-.hero-image {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  color: #fae5af;
+  margin-top: 1rem;
 }
 
 .content {
-  padding: 2rem;
+  padding: 3rem 2rem;
   background-color: #3127a5;
   color: #fae5af;
 }
 
 .intro h2 {
-  font-size: 2rem;
-  color: #ffdd15;
+  font-size: 2.5rem;
+  color: #94ff7a;
+  margin-bottom: 1rem;
 }
 
 .intro p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #fbf6e2;
 }
 
