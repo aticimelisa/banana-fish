@@ -8,9 +8,32 @@ body {
 }
 
 .hero {
+  background-image: url('images/bananafish.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #5343eb;
+  background-color: rgba(49, 39, 165, 0.7); /* #3127a5 transparent */
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.site-title {
+  font-size: 4rem;
+  color: #ffdd15;
+  text-shadow: 2px 2px #3127a5;
+}
+
+.site-subtitle {
+  font-size: 1.2rem;
+  color: #fbf6e2;
 }
 
 .hero-image {
@@ -19,13 +42,6 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-}
-
-.site-title {
-  font-size: 3rem;
-  color: #ffdd15;
-  margin-top: 1rem;
-  text-shadow: 2px 2px #3127a5;
 }
 
 .content {
