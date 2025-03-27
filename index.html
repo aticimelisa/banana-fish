@@ -8,6 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="language-switcher">
+        <a href="/en/home.html">EN</a>
+        <a href="/tr/home.html">TR</a>
+        <a href="/fr/home.html">FR</a>
+        <a href="/jp/home.html">日本語</a>
+      </div>      
+
   <header class="hero">
     <div class="hero-overlay">
       <h1 class="site-title">Banana Fish</h1>
@@ -15,15 +22,26 @@
     </div>
   </header>
 
+  <!-- 👇 Bu kısmı EKLİYORUZ -->
+  <div class="scroll-trigger"></div>
+
   <main class="content">
     <section class="intro">
-      <h2>Welcome to my blog</h2>
-      <p>This is a cozy corner for thoughts, colors, and stories.</p>
+      <h2>Welcome to my blog!</h2>
+      <p>You can call me Miel. You can follow my thoughts through this Alice’s Rabbit Hole. Even for me, it's hard to describe who I am — it takes time. But I’ll make your journey as easy as I can. </p>
+      <a href="menu.html" class="black-hole-link">
+        <div class="black-hole"></div>
+      </a>
+      
+      <p>Hint: Do it!</p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Banana Fish Blog</p>
+    <p>&copy; 2025 MIEL.</p>
   </footer>
+  
+  <!-- 👇 Script en sona alınmalı, böylece DOM yüklendikten sonra çalışır -->
+  <script src="script.js"></script>
 </body>
 </html>
