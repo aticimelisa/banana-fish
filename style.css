@@ -1,65 +1,132 @@
 /* style.css */
 
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #5343eb;
-  color: #fbf6e2;
-}
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5343eb;
+    color: #fbf6e2;
+  }
+  
+  .hero {
+    background-image: url('images/bananafish.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(49, 39, 165, 0.7); /* yarı saydam çerçeve */
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 90%;
+  
+    /* Başlangıçta görünmez */
+    opacity: 0;
+    transform: translateY(30px);
+    visibility: hidden;
+    transition: opacity 1.5s cubic-bezier(0.65, 0, 0.35, 1),
+              transform 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  
+  .hero-overlay.visible {
+    /* Scroll ile görünür hale gelen versiyon */
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  
+  .site-title {
+    font-size: 4rem;
+    color: #ffdd15;
+    text-shadow: 2px 2px #3127a5;
+    margin: 0;
+  }
+  
+  .site-subtitle {
+    font-size: 1.2rem;
+    color: #fae5af;
+    margin-top: 1rem;
+  }
+  
+  .scroll-trigger {
+    height: 1px;
+    width: 100%;
+  }
+  
+  .content {
+    padding: 3rem 2rem;
+    background-color: #3127a5;
+    color: #fae5af;
+  }
+  
+  .intro h2 {
+    font-size: 2.5rem;
+    color: #94ff7a;
+    margin-bottom: 1rem;
+  }
+  
+  .intro p {
+    font-size: 1.3rem;
+    color: #fbf6e2;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #5343eb;
+    color: #fae5af;
+    font-size: 0.9rem;
+  }
+  .black-hole-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.hero {
-  background-image: url('images/bananafish.png');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+  .black-hole {
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(ellipse at center, #000 0%, #111 100%);
+    border-radius: 50%;
+    box-shadow: inset 0 10px 25px rgba(0, 0, 0, 0.8);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
 
-.hero-overlay {
-  background-color: rgba(49, 39, 165, 0.7); /* yarı saydam çerçeve */
-  padding: 2rem;
-  border-radius: 1rem;
-  text-align: center;
-  max-width: 90%;
-}
+  .black-hole:hover {
+    transform: scale(1.1);
+  }
 
-.site-title {
-  font-size: 4rem;
-  color: #ffdd15;
-  text-shadow: 2px 2px #3127a5;
-  margin: 0;
-}
-
-.site-subtitle {
-  font-size: 1.2rem;
-  color: #fae5af;
-  margin-top: 1rem;
-}
-
-.content {
-  padding: 3rem 2rem;
-  background-color: #3127a5;
-  color: #fae5af;
-}
-
-.intro h2 {
-  font-size: 2.5rem;
-  color: #94ff7a;
-  margin-bottom: 1rem;
-}
-
-.intro p {
-  font-size: 1.3rem;
-  color: #fbf6e2;
-}
-
-.footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #5343eb;
-  color: #fae5af;
-  font-size: 0.9rem;
-}
+  .language-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    display: flex;
+    gap: 0.6rem;
+    background-color: rgba(49, 39, 165, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  
+  .language-switcher a {
+    color: #ffdd15;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .language-switcher a:hover {
+    color: #94ff7a;
+    transform: scale(1.1);
+  }
+  
+  
+  
