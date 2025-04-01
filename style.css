@@ -174,3 +174,48 @@ body {
   transform: scaleX(1); /* Balık zaten sağa bakıyorsa değiştirme */
 }
 
+.center-panel {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 0;
+  padding: 2rem;
+  width: 30vw;         /* 🟡 GENİŞLİK */
+  margin: 0 auto;      /* 🟡 ORTALAMA */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Dikeyde ortalama */
+  align-items: center;     /* Yatayda ortalama */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.category-button {
+  background-color: #3127a5; /* 🔵 Doygun ve sabit bir renk */
+  color: #ffdd15;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+}
+
+.category-button:hover {
+  background-color: #ffdd15; /* 🌟 Hover'da ters kontrast */
+  color: #3127a5;
+  border-color: #fbf6e2;
+  transform: translateY(-2px) scale(1.02);
+}
