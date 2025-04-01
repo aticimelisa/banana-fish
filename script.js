@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(trigger); // 👈 gözlenen artık trigger
   });
   
+
 function createFish() {
   const fish = document.createElement('img');
   fish.src = 'images/bananafish_menu.png';
@@ -25,11 +26,23 @@ function createFish() {
   fish.style.animationDuration = `${duration}s`;
   fish.style.animationDelay = `${Math.random() * 5}s`;
 
+  // 👇 Rastgele yön (true = sola, false = sağa)
+  const goLeft = Math.random() > 0.5;
+
+  if (goLeft) {
+    // Sağdan sola yüz
+    fish.style.left = '110%';
+    fish.style.animationName = 'swim-left';
+    fish.style.transform = 'scaleX(-1)';
+  } else {
+    // Soldan sağa yüz
+    fish.style.left = '-100px';
+    fish.style.animationName = 'swim-right';
+    // scaleX yok — orijinal yön
+  }
+
   document.getElementById('fishContainer').appendChild(fish);
 
   setTimeout(() => fish.remove(), duration * 1000 + 5000);
 }
 
-if (document.getElementById('fishContainer')) {
-  setInterval(createFish, 1200);
-}
