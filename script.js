@@ -15,10 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
 function createFish() {
+  const existingFish = document.querySelectorAll('.fishy').length;
+  if (existingFish >= 8) return; // 8 veya fazlaysa yeni balık doğurma ❌
+
   const fish = document.createElement('img');
   fish.src = 'images/bananafish_menu.png';
-  fish.classList.add('swim-fish');
+  fish.classList.add('swim-fish', 'fishy');
 
   const size = Math.random() * 40 + 40;
   fish.style.width = `${size}px`;
@@ -31,11 +35,15 @@ function createFish() {
 
   setTimeout(() => fish.remove(), duration * 1000 + 50000);
 }
+
 
 function createFishLeft() {
+  const existingFish = document.querySelectorAll('.fishy').length;
+  if (existingFish >= 8) return;
+
   const fish = document.createElement('img');
   fish.src = 'images/bananafish_menu.png';
-  fish.classList.add('swim-fish-left');
+  fish.classList.add('swim-fish-left', 'fishy');
 
   const size = Math.random() * 40 + 40;
   fish.style.width = `${size}px`;
@@ -48,12 +56,13 @@ function createFishLeft() {
 
   setTimeout(() => fish.remove(), duration * 1000 + 50000);
 }
-
 
 if (document.getElementById('fishContainer')) {
   setInterval(createFish, 3000);        // Eski soldan sağa
   setInterval(createFishLeft, 4200);    // Yeni sağdan sola (farklı hız!)
 }
+
+
 
 
 
