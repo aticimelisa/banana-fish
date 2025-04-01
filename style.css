@@ -147,10 +147,10 @@ body {
 
 .swim-fish {
   position: absolute;
+  top: 0;
+  z-index: 2;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-
-  /* scaleX(-1) YOK! */
 }
 
   
