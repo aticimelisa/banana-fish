@@ -142,24 +142,21 @@ body {
 
 .swim-fish {
   position: absolute;
-  animation-name: swim;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-
-  /* 👇 Balığı yatayda ters çevirir — sağa bakmasını sağlar */
-  transform: scaleX(-1);
 }
 
-
-@keyframes swim {
-  0% {
-    left: 110%;
-  }
-  100% {
-    left: -100px;
-  }
+/* soldan sağa */
+@keyframes swim-right {
+  0% { left: -100px; }
+  100% { left: 110%; }
 }
-                            
+
+/* sağdan sola */
+@keyframes swim-left {
+  0% { left: 110%; }
+  100% { left: -100px; }
+}
 
   
   
