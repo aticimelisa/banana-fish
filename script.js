@@ -29,7 +29,7 @@ function createFish() {
 
   document.getElementById('fishContainer').appendChild(fish);
 
-  setTimeout(() => fish.remove(), duration * 1000 + 25000);
+  setTimeout(() => fish.remove(), duration * 1000 + 50000);
 }
 
 function createFishLeft() {
@@ -46,7 +46,7 @@ function createFishLeft() {
 
   document.getElementById('fishContainer').appendChild(fish);
 
-  setTimeout(() => fish.remove(), duration * 1000 + 25000);
+  setTimeout(() => fish.remove(), duration * 1000 + 50000);
 }
 
 
