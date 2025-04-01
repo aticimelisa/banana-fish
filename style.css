@@ -145,7 +145,11 @@ body {
   animation-name: swim;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+
+  /* 👇 Balığı yatayda ters çevirir — sağa bakmasını sağlar */
+  transform: scaleX(-1);
 }
+
 
 @keyframes swim {
   0% {
