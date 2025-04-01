@@ -229,3 +229,9 @@ body {
   border-color: #fbf6e2;
   transform: translateY(-2px) scale(1.02);
 }
+
+.menu-title {
+  font-family: 'Playfair Display', serif;
+}
+
+
