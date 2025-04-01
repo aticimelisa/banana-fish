@@ -29,18 +29,31 @@ function createFish() {
 
   document.getElementById('fishContainer').appendChild(fish);
 
-  setTimeout(() => fish.remove(), duration * 1000 + 5000);
+  setTimeout(() => fish.remove(), duration * 1000 + 25000);
 }
+
+function createFishLeft() {
+  const fish = document.createElement('img');
+  fish.src = 'images/bananafish_menu2.png';
+  fish.classList.add('swim-fish-left');
+
+  const size = Math.random() * 40 + 40;
+  fish.style.width = `${size}px`;
+  fish.style.top = `${Math.random() * 100}vh`;
+  const duration = Math.random() * 10 + 10;
+  fish.style.animationDuration = `${duration}s`;
+  fish.style.animationDelay = 0;
+
+  document.getElementById('fishContainer').appendChild(fish);
+
+  setTimeout(() => fish.remove(), duration * 1000 + 25000);
+}
+
 
 if (document.getElementById('fishContainer')) {
-  setInterval(createFish, 1200);
+  setInterval(createFish, 3000);        // Eski soldan sağa
+  setInterval(createFishLeft, 4200);    // Yeni sağdan sola (farklı hız!)
 }
 
-document.querySelectorAll('img[src*="bananafish_menu"]').forEach(img => {
-  if (!img.classList.contains('swim-fish')) {
-    console.warn('İstenmeyen balık bulundu! 😱', img);
-    img.remove();
-  }
-});
 
 
