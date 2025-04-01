@@ -140,17 +140,20 @@ body {
   z-index: 0;
 }
 
-@keyframes swim-left {
-  0% { left: 110%; }
-  100% { left: -100px; }
-}
-
 .swim-fish {
   position: absolute;
-  top: 0;
-  z-index: 2;
+  animation-name: swim;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+@keyframes swim {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 110%;
+  }
 }
 
   
