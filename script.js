@@ -25,7 +25,7 @@ function createFish() {
   fish.style.top = `${Math.random() * 100}vh`;
   const duration = Math.random() * 10 + 10;
   fish.style.animationDuration = `${duration}s`;
-  fish.style.animationDelay = `${Math.random() * 5}s`;
+  fish.style.animationDelay = 0;
 
   document.getElementById('fishContainer').appendChild(fish);
 
