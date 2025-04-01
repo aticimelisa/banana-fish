@@ -145,6 +145,7 @@ body {
   animation-name: swim;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+    transform: scaleX(-1);
 }
 
 @keyframes swim {
