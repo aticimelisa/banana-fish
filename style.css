@@ -149,13 +149,12 @@ body {
 
 @keyframes swim {
   0% {
-    left: -100px;
-  }
-  100% {
     left: 110%;
   }
+  100% {
+    left: -100px;
+  }
 }
-
                             
 
   
