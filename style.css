@@ -201,17 +201,27 @@ body {
 }
 
 .category-button {
-  background-color: #3127a5; /* 🔵 Doygun ve sabit bir renk */
+  background-color: #3127a5;
   color: #ffdd15;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.75rem 2rem;
   font-size: 1.1rem;
   border-radius: 20px;
   transition: all 0.3s ease;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
   border: 2px solid transparent;
+
+  /* 🔽 NEW additions for equal and responsive sizing */
+  width: 100%;
+  max-width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
+
 
 .category-button:hover {
   background-color: #ffdd15; /* 🌟 Hover'da ters kontrast */
