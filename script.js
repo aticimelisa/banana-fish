@@ -36,4 +36,11 @@ if (document.getElementById('fishContainer')) {
   setInterval(createFish, 1200);
 }
 
+document.querySelectorAll('img[src*="bananafish_menu"]').forEach(img => {
+  if (!img.classList.contains('swim-fish')) {
+    console.warn('İstenmeyen balık bulundu! 😱', img);
+    img.remove();
+  }
+});
+
 
