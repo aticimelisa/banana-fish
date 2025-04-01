@@ -64,5 +64,14 @@ if (document.getElementById('fishContainer')) {
 
 
 
-
+function checkPassword() {
+  const input = document.getElementById('passwordInput').value;
+  const errorMsg = document.getElementById('errorMsg');
+  
+  if (input === "Ash Lynx") {
+    window.location.href = "ash.html";
+  } else {
+    errorMsg.style.display = "block";
+  }
+}
 
