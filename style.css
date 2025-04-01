@@ -129,26 +129,34 @@ body {
   }
 
 
-function createFish() {
-  const fish = document.createElement('img');
-  fish.src = 'images/bananafish_menu.png';
-  fish.classList.add('swim-fish');
-
-  const size = Math.random() * 40 + 40;
-  fish.style.width = `${size}px`;
-  fish.style.top = `${Math.random() * 100}vh`;
-  const duration = Math.random() * 10 + 10;
-  fish.style.animationDuration = `${duration}s`;
-  fish.style.animationDelay = `${Math.random() * 5}s`;
-
-  document.getElementById('fishContainer').appendChild(fish);
-
-  setTimeout(() => fish.remove(), duration * 1000 + 5000);
+.fish-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
 }
 
-if (document.getElementById('fishContainer')) {
-  setInterval(createFish, 1200);
+.swim-fish {
+  position: absolute;
+  animation-name: swim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+
+@keyframes swim {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+                            
 
   
   
