@@ -26,23 +26,13 @@ function createFish() {
   fish.style.animationDuration = `${duration}s`;
   fish.style.animationDelay = `${Math.random() * 5}s`;
 
-  // 👇 Rastgele yön (true = sola, false = sağa)
-  const goLeft = Math.random() > 0.5;
-
-  if (goLeft) {
-    // Sağdan sola yüz
-    fish.style.left = '110%';
-    fish.style.animationName = 'swim-left';
-    
-  } else {
-    // Soldan sağa yüz
-    fish.style.left = '-100px';
-    fish.style.animationName = 'swim-right';
-      fish.style.transform = 'scaleX(-1)';
-  }
+  // 🐟 Balık sola doğru yüzsün ve sola bakıyor zaten ➝ scaleX gerek yok
+  fish.style.left = '110%'; // ekranın sağından başla
+  fish.style.animationName = 'swim-left';
 
   document.getElementById('fishContainer').appendChild(fish);
 
   setTimeout(() => fish.remove(), duration * 1000 + 5000);
 }
+
 
