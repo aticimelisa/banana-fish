@@ -33,12 +33,12 @@ function createFish() {
     // Sağdan sola yüz
     fish.style.left = '110%';
     fish.style.animationName = 'swim-left';
-    fish.style.transform = 'scaleX(-1)';
+    
   } else {
     // Soldan sağa yüz
     fish.style.left = '-100px';
     fish.style.animationName = 'swim-right';
-    // scaleX yok — orijinal yön
+      fish.style.transform = 'scaleX(-1)';
   }
 
   document.getElementById('fishContainer').appendChild(fish);
