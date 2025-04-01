@@ -153,8 +153,24 @@ body {
     left: -150px;
   }
   100% {
-    left: 120%;
+    left: 150%;
   }
 }
   
-  
+@keyframes swim-left {
+  0% {
+    left: 150%;
+  }
+  100% {
+    left: -150px;
+  }
+}
+
+.swim-fish-left {
+  position: absolute;
+  animation-name: swim-left;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: scaleX(1); /* Balık zaten sağa bakıyorsa değiştirme */
+}
+
