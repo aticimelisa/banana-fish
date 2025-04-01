@@ -132,8 +132,8 @@ body {
 .fish-container {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -50;
+  width: 150%;
   height: 100%;
   pointer-events: none;
   overflow: hidden;
