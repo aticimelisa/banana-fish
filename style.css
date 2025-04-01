@@ -140,22 +140,17 @@ body {
   z-index: 0;
 }
 
+@keyframes swim-left {
+  0% { left: 110%; }
+  100% { left: -100px; }
+}
+
 .swim-fish {
   position: absolute;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
 
-/* soldan sağa */
-@keyframes swim-right {
-  0% { left: -100px; }
-  100% { left: 110%; }
-}
-
-/* sağdan sola */
-@keyframes swim-left {
-  0% { left: 110%; }
-  100% { left: -100px; }
+  /* scaleX(-1) YOK! */
 }
 
   
