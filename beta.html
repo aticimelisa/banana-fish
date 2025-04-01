@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Access Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🐟 Balık arka planı -->
+  <div class="fish-container" id="fishContainer"></div>
+
+  <!-- 🔐 Cam içi şifre kutusu -->
+  <div class="center-panel">
+    <h1 class="menu-title" style="color: #ffdd15; font-size: 2.2rem;">Enter the Code</h1>
+    <p style="color: #fae5af; margin-bottom: 2rem;">Only those who remember him may pass.</p>
+
+    <input type="password" id="passwordInput" placeholder="Password" 
+           style="padding: 0.7rem 1rem; font-size: 1.1rem; border-radius: 10px; border: none; outline: none; width: 80%; max-width: 300px; margin-bottom: 1rem; text-align: center;">
+
+    <button onclick="checkPassword()" class="category-button" style="margin-top: 1rem;">Enter</button>
+
+    <p id="errorMsg" style="color: #ff7f7a; margin-top: 1rem; display: none;">Wrong password.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
