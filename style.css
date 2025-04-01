@@ -150,7 +150,7 @@ body {
 
 @keyframes swim {
   0% {
-    left: -100px;
+    left: -150px;
   }
   100% {
     left: 110%;
