@@ -34,7 +34,7 @@ function createFish() {
 
 function createFishLeft() {
   const fish = document.createElement('img');
-  fish.src = 'images/bananafish_menu2.png';
+  fish.src = 'images/bananafish_menu.png';
   fish.classList.add('swim-fish-left');
 
   const size = Math.random() * 40 + 40;
