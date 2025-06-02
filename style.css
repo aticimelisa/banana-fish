@@ -223,16 +223,90 @@ body {
 }
 
 
-.category-button:hover {
+.category-button:hover:not(.notablog-button) {
   background-color: #ffdd15; /* 🌟 Hover'da ters kontrast */
   color: #3127a5;
   border-color: #fbf6e2;
   transform: translateY(-2px) scale(1.02);
 }
 
+
 .menu-title {
   font-family: 'Playfair Display', serif;
 }
+
+
+
+.hole-container {
+  position: relative;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hole {
+  position: absolute;
+  font-size: 4rem;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Gerçek buton → görünmez ama tıklanabilir */
+.notablog-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 60px;
+  z-index: 1;
+  background: none;
+  border: none;
+  color: transparent;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+/* Sahte görüntü */
+.fake-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 250px;
+  height: 60px;
+  background-color: #3127a5;
+  color: #ffdd15;
+  font-weight: bold;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease;
+  pointer-events: none; /* Tıklanamaz, sadece görüntü */
+}
+
+/* Hover efekti sadece görüntüyü kaydırır */
+.notablog-button:hover .fake-button {
+  transform: translateX(180px);
+}
+
+.notablog-button {
+  background-color: rgba(0, 0, 0, 0) !important;  /* Şeffaf arka plan */
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.notablog-button:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  transform: none !important;
+}
+
+
 
 
 .flower-link {
@@ -259,3 +333,740 @@ body {
   right: -10px;
   bottom: -10px;
 }
+
+/* Blog CSS */
+
+.blog-filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #5343eb;
+  padding: 1rem;
+  border-bottom: 2px solid #ffdd15;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: 2px solid #ffdd15;
+  color: #ffdd15;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #ffdd15;
+  color: #3127a5;
+}
+
+.blog-post {
+  display: flex;
+  background-color: #fbf6e2;
+  color: #1e1e1e;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 900px;
+  border-left: 8px solid #3127a5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.blog-post:hover {
+  transform: scale(1.01);
+}
+
+.blog-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.blog-content {
+  flex: 1;
+}
+
+.blog-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #3127a5;
+  text-decoration: none;
+}
+
+.blog-title:hover {
+  text-decoration: underline;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.2rem 0;
+}
+
+.blog-excerpt {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Etikete göre border sol renk */
+.blog-post.science {
+  border-left-color: #7aa9ff;
+}
+
+.blog-post.books {
+  border-left-color: #94ff7a;
+}
+
+.blog-post.personal {
+  border-left-color: #ff7f7a;
+}
+
+.blog-post.poems {
+  border-left-color: #847aff;
+}
+
+.blog-post.art {
+  border-left-color: #7ae5ff; /* Turkuaz-mavi */
+}
+
+.blog-post.code {
+  border-left-color: #ffdd15; /* Muz sarısı */
+}
+
+.blog-post.others {
+  border-left-color: #bfbfbf; /* Sıcak açık sarı */
+}
+
+
+
+/* science1.html */
+
+.blog-image-large {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* art1.html */
+
+/* Sadece art1.html için geçerli */
+
+body.art1 {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Üstteki geniş görsel */
+body.art1 .header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* İçerik kutusu */
+body.art1 .content {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* İlk gotik harf */
+body.art1 .dropcap {
+  float: left;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3.5em;
+  line-height: 1;
+  padding-right: 0.1em;
+  color: #5343eb;
+}
+
+/* Başlıklar */
+body.art1 h2 {
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 0.2em;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+body.art1 h3 {
+  color: #3127a5;
+  margin-top: 2rem;
+}
+
+/* Linkler */
+body.art1 a {
+  color: #3127a5;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+body.art1 a:hover {
+  color: #7ae5ff;
+  border-color: #7ae5ff;
+}
+
+/* Bold metin */
+body.art1 b {
+  color: #94ff7a;
+}
+
+/* Marker vurgusu */
+body.art1 mark {
+  background-color: #ffdd15;
+  color: black;
+}
+
+/* Görseller ve açıklamaları */
+body.art1 figure {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+body.art1 figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+body.art1 figcaption {
+  font-size: 0.9rem;
+  color: #000000;
+  margin-top: 0.5rem;
+}
+
+/* Referanslar */
+body.art1 .references {
+  margin-top: 4rem;
+  font-size: 1rem;
+  color: #3127a5;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+/* Sağ alttaki geri butonu */
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff7f7a;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background-color: #e06767;
+}
+
+body.art1 .content {
+  background-color: transparent !important;
+  color: #000000 !important;
+}
+
+body.art1 .reading-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+body.art1 .header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+body.art1 {
+  background-color: #f5f5f5; /* veya #fbf6e2 gibi palet rengin */
+  color: #000;
+}
+
+/* Okuma alanı yine beyaz */
+body.art1 .reading-wrapper {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+
+/* not a blog css */
+.notablog #graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, #f0f0f0, #dcdcdc);
+  position: relative;
+}
+
+.notablog svg {
+  border: 2px dashed #aaa;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  font-size: 12px;
+  z-index: 10;
+}
+
+/* lecture css */
+
+.lecture {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  color: #222;
+  font-family: 'Georgia', serif;
+  border-left: 5px solid #ccc;
+  line-height: 1.6;
+}
+
+.lecture h1, .lecture h2 {
+  color: #4a4a4a;
+}
+
+.lecture ul {
+  padding-left: 1.5rem;
+}
+
+.lecture footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #555;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.lecture .pagination {
+  display: flex;
+  justify-content: flex-start;  /* sola hizalama */
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.lecture .pagination a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.lecture .pagination a:hover {
+  background-color: #e0e0e0;
+  border-color: #888;
+}
+
+.lecture .pagination a.active {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+
+.lecture .lecture-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.lecture .lecture-image img {
+  max-width: 70%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.lecture .fig-caption {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.lecture .ref {
+  position: relative;
+  cursor: help;
+  color: #3366cc;
+}
+
+.lecture .ref::after {
+  content: attr(data-ref);
+  display: none;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  color: #222;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.lecture .ref:hover::after {
+  display: block;
+}
+
+/* Lecture 2 */
+
+.lecture .organ-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.lecture .organ-list .column {
+  flex: 1 1 20%;
+  min-width: 180px;
+}
+
+.lecture .organ-list ol {
+  padding-left: 1.2rem;
+}
+
+/* Tissue box */
+
+.lecture .tissue-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.lecture .tissue-list {
+  flex: 1 1 200px;
+  padding-left: 1rem;
+}
+
+.lecture .tissue-notes {
+  flex: 2 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lecture .tissue-box {
+  border: 1px solid #bbb;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.lecture .tissue-box strong {
+  color: #333;
+}
+
+.lecture .tissue-box.red-border {
+  border: 2px solid #d9534f;
+}
+
+.lecture .tissue-box.blue-border {
+  border: 2px solid #5bc0de;
+}
+
+/* Lecture table css */
+
+.lecture .cell-function-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.lecture .cell-function-table th,
+.lecture .cell-function-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.75rem;
+}
+
+.lecture .cell-function-table thead {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+.lecture .highlight-green {
+  color: green;
+  font-weight: bold;
+}
+
+.lecture .highlight-yellow {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.lecture .table-footnotes {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.lecture .cell-function-table td:empty {
+  background-color: #c0c0c0;  /* koyu gri arka plan */
+  color: #ccc;             /* açık gri yazı rengi (görünmese bile tutarlı) */
+  position: relative;
+}
+
+
+
+/* contact me css */
+
+body.contact {
+  background-color: #5343eb;
+  color: #fbf6e2;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.contact .contact-container {
+  background-color: rgba(49, 39, 165, 0.3);
+  border: 2px solid #3127a5;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 12px #3127a5;
+}
+
+.contact .contact-container h1 {
+  color: #ffdd15;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contact .info-note {
+  font-size: 1rem;
+  color: #fae5af;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.contact .info-note a {
+  color: #fbf6e2;
+  text-decoration: underline;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact label {
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #ffdd15;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  background-color: #3127a5;
+  color: #fbf6e2;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background-color: #ffdd15;
+  color: #3127a5;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.contact button:hover {
+  background-color: #fae5af;
+}
+
+/* Tissue Main Page css */
+
+.tissuemain {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+.tissuemain header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tissuemain h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.tissuemain .subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.tissuemain section {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.tissuemain h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #555;
+  padding-left: 1rem;
+  color: #222;
+}
+
+.tissuemain .collapsible {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tissuemain .collapser {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tissuemain .collapser:hover {
+  background-color: #f0f0f0;
+}
+
+.tissuemain .content {
+  display: none;
+  padding: 1rem;
+  background-color: #ffffff;  /* ✔ beyaz kutu */
+  border-top: 1px solid #e0e0e0;
+  border-radius: 0 0 8px 8px;
+  color: #333333;  /* ✔ okunabilir metin */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mentor Card */
+.tissuemain .mentor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.tissuemain .mentor-card {
+  width: 180px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.tissuemain .mentor-card:hover {
+  transform: scale(1.03);
+}
+
+.tissuemain .mentor-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.tissuemain .mentor-info {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: #333;
+  word-wrap: break-word;
+}
+
+
+
