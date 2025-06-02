@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banana Fish Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="blog-filter-bar">
+    <button class="filter-btn active" data-tag="all">All</button>
+    <button class="filter-btn" data-tag="science">Science</button>
+    <button class="filter-btn" data-tag="books">Books</button>
+    <button class="filter-btn" data-tag="personal">Personal</button>
+    <button class="filter-btn" data-tag="poems">Short Stories & Poems</button>
+    <button class="filter-btn" data-tag="art">Art</button>
+    <button class="filter-btn" data-tag="code">Code</button>
+    <button class="filter-btn" data-tag="others">Others</button>
+
+  </div>
+
+  <main class="content" style="background-color: #fbf6e2; color: #1e1e1e;">
+
+    <div class="blog-post science" data-date="2025-04-28">
+      <img src="blog/images/science1.png" alt="Science image" class="blog-image">
+      
+      <div class="blog-content">
+        <a href="blog/science1.html" class="blog-title">
+          Weaponized Language and Digital Warfare
+        </a>
+        <div class="blog-date">April 28, 2025</div>
+        <p class="blog-excerpt">
+          Our investigation of a spearphishing campaign reveals how attackers weaponize software and websites to harm communities...
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-post science" data-date="2025-05-10">
+      <img src="blog/images/science1.png" alt="Science image" class="blog-image">
+      
+      <div class="blog-content">
+        <a href="blog/science1.html" class="blog-title">
+          Weaponized Language and Digital Warfare
+        </a>
+        <div class="blog-date">May 10, 2025</div>
+        <p class="blog-excerpt">
+          Our investigation of a spearphishing campaign reveals how attackers weaponize software and websites to harm communities...
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-post books" data-date="2025-05-18">
+      <img src="blog/images/book1.jpg" alt="Books image" class="blog-image">
+      
+      <div class="blog-content">
+        <a href="blog/books1.html" class="blog-title">
+          Emotion in Ink: Rediscovering The Giver Through Art
+        </a>
+        <div class="blog-date">May 18, 2025</div>
+        <p class="blog-excerpt">
+          I loved the nostalgic and slightly surreal tone. Here are some reflections on memory, food, and soft disorientation...
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-post art" data-date="2025-05-18">
+      <img src="blog/images/art1.jpg" alt="Art image" class="blog-image">
+      <div class="blog-content">
+        <a href="blog/art1.html" class="blog-title">Haunting Lines: A Journey Through the Works of Dino Battaglia</a>
+        <div class="blog-date">May 18, 2025</div>
+        <p class="blog-excerpt">
+          In the quiet corridors of European comic art, few names echo with the hushed...
+        </p>
+      </div>
+    </div>
+    
+
+    <!-- Diğer kartlar buraya benzer şekilde eklenebilir -->
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 MIEL.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <button class="back-button" onclick="history.back()">⟵ Back</button>
+
+</body>
+</html>
